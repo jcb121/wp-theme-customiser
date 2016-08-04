@@ -1,5 +1,5 @@
 [data-customise]{
-	z-index: 1;
+
 }
 .launch_options{
 	position: absolute;
@@ -9,11 +9,8 @@
 	left:0px;
 	bottom:0px;
 	
-	&:hover{
-		box-shadow: 0px 0px 5px red;
-	}
+	box-shadow: 0px 0px 5px red;
 }
-
 
 
 .options_picker{
@@ -21,7 +18,7 @@
 	font-family:'Trebuchet MS', Helvetica, sans-serif;
 	color:black;
 	position: absolute;
-	z-index: 999999999999;
+	z-index: 1234;
 	margin:0px !important;
 	
 	display: flex;

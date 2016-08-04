@@ -6,8 +6,6 @@ var customiser = {
 
 jQuery(document).ready(function($) {
 	
-	
-	
 	init();
 	function init(){
 		/*get_options(["colours", "fonts"]).then(function(){
@@ -16,16 +14,22 @@ jQuery(document).ready(function($) {
 		get_template_parts(['container', 'background', 'colour', 'font']).then(function(){
 			console.log("pre-loaded templates");
 		})*/
+	}
+	
+	$('body').on('click', '[data-customise]', function(event){
+		event.stopPropagation();
 		
-		$('[data-customise]').each(function(index, element){
+		
+		if($(this).data("active") === true){
+			$(this).data("active", false);
+			$(this).find('.launch_options').remove();
+		}
+		else{
+			$(this).data("active", true);
+			set_not_static(this);
 			
-			set_zindex(element, '[data-customise]');
-			set_not_static(element);
-			
-			
+			var options = $(this).data('customise').split(',');
 			var options_container = $('<div class="launch_options"></div>');
-			
-			var options = $(element).data('customise').split(',');
 			
 			//Simple mode
 			options.forEach(function(option, index){
@@ -45,11 +49,9 @@ jQuery(document).ready(function($) {
 			button.data("option", options);
 			button.appendTo(options_container);
 			
-			options_container.appendTo(element);
-		})
-	}
-	
-	
+			options_container.appendTo(this);
+		}	
+	});
 	
 	
 	
@@ -136,10 +138,7 @@ jQuery(document).ready(function($) {
 				close_picker(picker);
 			});
 		}
-		
-		set_not_static(container)
-		container.css('z-index', 999);
-		
+			
 		get_template_part('container').then(function(_container){
 			
 			get_template_parts(parts).then(function(){
@@ -206,8 +205,8 @@ jQuery(document).ready(function($) {
 		$(picker).remove();
 		
 		//gets / sets z-index
-		var zindex = container.parents('[data-customise]').toArray().length + 1;
-		container.css('z-index', zindex);
+		//var zindex = container.parents('[data-customise]').toArray().length + 1;
+		//container.css('z-index', zindex);
 		
 	}
 	
