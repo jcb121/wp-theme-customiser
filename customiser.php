@@ -32,6 +32,9 @@ function get_theme_option(){
 		http_response_code(204);
 		wp_die();
 	}
+	if($option === "border"){
+		$option = "colour";
+	}
 	
 	
 	$options = get_option("cardiffapp_" . $option);

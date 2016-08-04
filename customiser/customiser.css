@@ -40,9 +40,7 @@
       margin-top: 8px;
       border: 1px solid #dbdbdb;
       border-radius: 3px; }
-    .options_picker .content .options_form .background .option,
-    .options_picker .content .options_form .font .option,
-    .options_picker .content .options_form .colour .option {
+    .options_picker .content .options_form .option {
       padding: 4px;
       margin: 4px;
       border-radius: 3px;
