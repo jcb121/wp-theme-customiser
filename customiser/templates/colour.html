@@ -1,0 +1,10 @@
+<fieldset class="colour">
+	<legend>Font Colour</legend>
+	<div class="layout-row layout-wrap">
+	{{#each .}}
+		<label class="flex option colour_{{@key}}">
+			<input class="colour" data-class="colour_{{@key}}" type="radio" name="colour" />{{this}}
+		</label> 
+	{{/each}}
+	</div>	
+</fieldset>

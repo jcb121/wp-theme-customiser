@@ -1,0 +1,14 @@
+@import '../../scss/_variables';
+
+#site-home-content{
+	
+	@import 'fragments/_main-image';
+	
+	.content{
+		padding:16px;
+	
+		@import 'fragments/_platforms';
+		@import 'fragments/_contact';
+		@import 'fragments/_technology';
+	}
+}

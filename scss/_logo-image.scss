@@ -1,0 +1,21 @@
+.logo-image{
+	img{
+		margin:16px;
+		-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+		filter: grayscale(100%);
+		width: auto;
+		height:150px;
+		
+		-webkit-transition: transform 2s; /* Safari 3.1 to 6.0 */
+		transition: transform 2s;
+		
+		&:hover{
+			-webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+			filter:grayscale(0%);
+			
+			-ms-transform: scale(1.1); /* IE 9 */
+			-webkit-transform: scale(1.1); /* Safari */
+			transform: scale(1.1);
+		}
+	}
+}

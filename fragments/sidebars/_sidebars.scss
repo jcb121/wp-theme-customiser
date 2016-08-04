@@ -1,0 +1,34 @@
+#primary_sidebar_left, #primary_sidebar_right{
+	
+	@include md_card();
+	padding:16px;
+	
+	display: flex;
+	flex-direction: column;
+
+	.widget-area{
+		margin:0px;
+		padding:0px;
+		.widget{
+			list-style: none;
+		}
+	}
+	
+	.widget{
+		padding-bottom: 16px;
+		border-bottom:2px grey solid;
+		&:last-of-type{
+			border-bottom:none;
+		}
+	}
+}
+
+#primary_sidebar_left{
+	order:1;
+	@media (max-width: 960px){
+		order:3;
+	}
+}
+#primary_sidebar_right{
+	order:4;
+}

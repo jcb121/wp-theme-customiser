@@ -1,0 +1,29 @@
+.contact{
+	h2{
+		
+	}
+	.contact-info{
+		padding:8px;
+		margin:16px 64px;
+		text-align: center;
+		
+		-webkit-box-shadow: 0px 0px 32px 1px rgba(0,0,0,0.4);
+		-moz-box-shadow: 0px 0px 32px 1px rgba(0,0,0,0.4);
+		box-shadow: 0px 0px 32px 1px rgba(0,0,0,0.4);
+		
+		@media (max-width: 550px) {
+			margin:16px 16px;
+		}
+		
+		h3{
+			
+		}
+		h4{
+			a{
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,36 @@
+<div class="options_picker">
+	
+	{{#if bottom}}
+	<div class="arrow_up"></div>
+	{{/if}}
+	
+	<div class="content">
+		<div class="toolbar layout-row layout-space-between">
+			<span class="header"></span>
+			<button type="button" class="close icon-button">
+				<span class="dashicons dashicons-no"></span>
+			</button>
+			
+		</div>
+		<form class="options_form">
+			{{{background}}}
+			{{{layout}}}
+			{{border}}
+			
+			
+			{{{colour}}}
+			{{{font}}}
+			{{{font_size}}}
+			{{{font_layout}}}
+			
+			<div class="layout-row-reverse">
+				<button class="button button-primary" type="submit">Done</button>
+			</div>	
+		</form>	
+	</div>
+	
+	{{#if top}}
+	<div class="arrow_down"></div>
+	{{/if}}
+
+</div>

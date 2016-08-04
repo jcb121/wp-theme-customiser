@@ -1,0 +1,107 @@
+[data-customise]{
+	z-index: 1;
+}
+.launch_options{
+	position: absolute;
+	z-index:1;
+	top:0px;
+	right:0px;
+	left:0px;
+	bottom:0px;
+	
+	&:hover{
+		box-shadow: 0px 0px 5px red;
+	}
+}
+
+
+
+.options_picker{
+	
+	font-family:'Trebuchet MS', Helvetica, sans-serif;
+	color:black;
+	position: absolute;
+	z-index: 999999999999;
+	margin:0px !important;
+	
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	
+	.arrow_down{
+		width: 0; 
+		height: 0; 
+		border-left: 25px solid transparent;
+		border-right: 25px solid transparent;
+		
+		border-top: 25px solid black;
+	}
+	.content{
+		
+		padding:16px;
+		
+		.icon-button{
+			background-color: white;
+			border:1px solid #dbdbdb;
+			border-radius: 3px;
+			padding:8px;
+			
+			box-shadow: 
+				0 1px 3px 0 rgba(0,0,0,.2),
+				0 1px 1px 0 rgba(0,0,0,.14),
+				0 2px 1px -1px rgba(0,0,0,.12);
+		}
+		
+		border:1px solid black;
+		border-radius: 2px;
+		background-color: white;
+		box-shadow: 
+			0 1px 3px 0 rgba(0,0,0,.2),
+			0 1px 1px 0 rgba(0,0,0,.14),
+			0 2px 1px -1px rgba(0,0,0,.12);
+		
+		
+		.options_form{
+			
+			fieldset{
+				margin:0;
+				margin-top:8px;
+				border: 1px solid #dbdbdb;
+				border-radius: 3px;
+			}
+			
+			.background,
+			.font,
+			.colour{
+				.option{
+					padding:4px;
+					margin:4px;
+					border-radius: 3px;
+					border:1px solid #dbdbdb;
+				}
+			}
+			
+			button[type="submit"]{
+				padding:8px;
+				margin-top:16px;
+				border:1px solid #dbdbdb;
+				border-radius: 3px;
+				background-color: white;
+				
+				box-shadow: 
+					0 1px 3px 0 rgba(0,0,0,.2),
+					0 1px 1px 0 rgba(0,0,0,.14),
+					0 2px 1px -1px rgba(0,0,0,.12);
+			}
+		}
+	}
+	.arrow_up{
+		width: 0; 
+		height: 0; 
+		border-left: 25px solid transparent;
+		border-right: 25px solid transparent;
+
+		border-bottom: 25px solid black;
+	}
+}

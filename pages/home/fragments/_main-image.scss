@@ -1,0 +1,20 @@
+#main-image{
+	
+	.para_image{
+		height:400px;
+		background-color:transparent !important; /* Is transparent so that the parallax image works!*/
+	}
+	
+	.image{
+		display: block;
+		width: 100%;
+	}
+	.image-footer{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		>*{
+			margin:16px 16px;
+		}
+	}
+}

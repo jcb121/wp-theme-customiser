@@ -1,0 +1,23 @@
+@import 'scss/_variables';
+@import 'scss/_flex';
+
+@import 'fragments/header/_header';
+@import 'fragments/footer/_footer';
+@import 'fragments/content/_content';
+@import 'scss/_logo-image';
+
+body {
+	padding:0px;
+	margin:0px;
+}
+
+.site-width {
+	max-width: 1080px;
+	margin-left:auto;
+	margin-right:auto;
+	
+	@media (max-width: 1080px + 32px) {
+		margin-left:16px;
+		margin-right:16px;
+	}
+}

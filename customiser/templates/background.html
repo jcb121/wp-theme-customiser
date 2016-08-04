@@ -1,0 +1,11 @@
+<fieldset class="background">
+	<legend>Background Colour</legend>
+	<div class="layout-row layout-wrap">
+	{{#each .}}
+		<label class="flex option bg_{{@key}}">
+			<input class="background" data-class="bg_{{@key}}" type="radio" name="bg" />{{this}}
+		</label>
+	{{/each}}	
+	 </div>
+	
+</fieldset>

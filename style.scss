@@ -1,0 +1,43 @@
+/*
+Theme Name: Cardiff App
+Theme URI: http://CardiffAppDevelopment.com
+Author: Jesse Baker
+Author URI: http://52WebDesigns.com
+Description: Fill Me.
+Version: 0.01
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: cardiffapp
+*/
+
+@import 'scss/_general';
+
+
+.center{
+	text-align: center;
+}
+
+
+#page{
+	
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	
+	@media (max-width: 960px){
+		flex-wrap: wrap;
+	}
+	
+	@import 'fragments/sidebars/_sidebars';
+	
+	#page_content_container{
+		width:100%;
+		order:2;
+		
+		@import 'fragments/page_widgets/_widget_areas';
+		
+		#page_content{
+			@include md_card();
+		}
+	}
+}
