@@ -154,6 +154,8 @@ function cardiffapp_customizer_live_preview(){
 	
 	wp_enqueue_script( 'cardiffapp-cusomizer-settings', get_template_directory_uri().'/customiser/customiser-settings.js', array('jquery'), "0.1", true );
 	wp_enqueue_script( 'cardiffapp-cusomizer-theme', get_template_directory_uri().'/customiser/customiser-theme.js', array('jquery'), "0.1", true );
+	wp_enqueue_script( 'cardiffapp-cusomizer-functions', get_template_directory_uri().'/customiser/functions.js', array('jquery'), "0.1", true );
+
 	
 	wp_enqueue_style('cardiffapp-cusomizer-style', get_template_directory_uri().'/customiser/customiser.css');
 }
