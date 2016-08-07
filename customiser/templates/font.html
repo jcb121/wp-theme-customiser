@@ -2,8 +2,10 @@
 	<legend>Font Face</legend>
 	<div class="layout-column">
 	{{#each .}}
-		<label class="font_{{@key}}">
-			<input class="font" data-class="font_{{@key}}" type="radio" name="font" /> abcABC - {{this}}
+		<label class="option font_{{@key}}">
+			<input class="font" data-class="font_{{@key}}" type="radio" name="font" />
+			abcABC -
+			<span class="value">{{this}}</span>
 		</label> 
 	{{/each}}	
 	</div>

@@ -3,7 +3,8 @@
 	<div class="layout-row layout-wrap">
 	{{#each .}}
 		<label class="flex option bg_{{@key}}">
-			<input class="background" data-class="bg_{{@key}}" type="radio" name="bg" />{{this}}
+			<input class="background" data-class="bg_{{@key}}" type="radio" name="bg" />
+			<span class="value">{{this}}</span>
 		</label>
 	{{/each}}	
 	 </div>

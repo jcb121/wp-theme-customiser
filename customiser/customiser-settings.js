@@ -16,12 +16,27 @@
 			value.bind( function( newval ) {
 				
 				$('#colour_' + name).text(' .colour_'+ name +' { color: ' + newval + ' }')
-				$('.option.colour_' + name).text(newval);
+				$('.option.colour_' + name + ' .value').text(newval);
 				
 				$('#bg_' + name).text(' .bg_'+ name +' { background-color: ' + newval + ' }')
-				$('.option.bg_' + name).text(newval);
+				$('.option.bg_' + name + ' .value').text(newval);
 				
 			});
 		});
 	});	
+	
+	var fonts = ['1', '2', '3', '4', '5'];
+	
+	fonts.forEach(function(name){
+		
+		wp.customize( 'font_' + name, function( value ) {
+			value.bind( function( newval ) {
+				
+				$('#font_' + name).text(' .font_'+ name +' { font-family: ' + newval + ' }')
+				$('.option.font_' + name + ' .value').text(newval);
+				
+			});
+		});
+	});	
+	
 })(jQuery);
