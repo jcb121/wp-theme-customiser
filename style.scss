@@ -12,6 +12,9 @@ Text Domain: cardiffapp
 
 @import 'scss/_general';
 
+*{
+	box-sizing: border-box;
+}
 
 .center{
 	text-align: center;

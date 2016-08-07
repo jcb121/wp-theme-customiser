@@ -8,7 +8,6 @@
 jQuery(function($){
 	
 	get_options(['colour','font']).then(function(_colours, _fonts){
-		console.log(colours, fonts);
 		
 		var colours = [];
 		for(var name in _colours){
@@ -18,12 +17,11 @@ jQuery(function($){
 			wp.customize( 'colour_' + name, function( value ) {
 				value.bind( function( newval ) {
 					
-					console.log(name);
-					
 					$('#colour_' + name).text(' .colour_'+ name +' { color: ' + newval + '; }')
-					$('.option.colour_' + name + ' .value').text(newval);
-					
+					$('#border_colour_' + name).text(' .border_colour_'+ name +' { border-color: ' + newval + '; }')
 					$('#bg_' + name).text(' .bg_'+ name +' { background-color: ' + newval + '; }')
+					
+					$('.option.colour_' + name + ' .value').text(newval);
 					$('.option.bg_' + name + ' .value').text(newval);
 					
 				});

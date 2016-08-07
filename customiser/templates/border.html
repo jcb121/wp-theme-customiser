@@ -2,12 +2,20 @@
 	<fieldset class="border">
 		<legend>Border Style</legend>
 		<div class="layout-row layout-wrap">
-	
-			<label class="flex option border_{{@key}}">
-				<input class="colour" data-class="colour_{{@key}}" type="radio" name="colour" />Dashed
+			<label class="flex option">
+				<input data-prefix="border_style_" data-class="border_style_none" type="radio" name="border_style" />None
 			</label>
-			<label class="flex option border_{{@key}}">
-				<input class="colour" data-class="colour_{{@key}}" type="radio" name="colour" />Solid
+			<label class="flex option">
+				<input data-prefix="border_style_" data-class="border_style_dashed" type="radio" name="border_style" />Dashed
+			</label>
+			<label class="flex option">
+				<input data-prefix="border_style_" data-class="border_style_dotted" type="radio" name="border_style" />Dotted
+			</label>
+			<label class="flex option">
+				<input data-prefix="border_style_" data-class="border_style_double" type="radio" name="border_style" />Double
+			</label>
+			<label class="flex option">
+				<input data-prefix="border_style_" data-class="border_style_solid" type="radio" name="border_style" />Solid
 			</label>
 		</div>	
 	</fieldset>
@@ -16,22 +24,23 @@
 		<div class="layout-row layout-wrap">
 		{{#each .}}
 			<label class="flex option bg_{{@key}}">
-				<input class="colour" data-class="border_colour_{{@key}}" type="radio" name="colour" />{{this}}
+				<input data-prefix="border_colour_" data-class="border_colour_{{@key}}" type="radio" name="colour" />
+				<span class="value">{{this}}</span>
 			</label> 
 		{{/each}}
 		</div>	
 	</fieldset>
 	<fieldset class="border">
-		<legend>Border Thinkness</legend>
+		<legend>Border Width</legend>
 		<div class="layout-row layout-wrap">
 			<label class="flex option border_thin">
-				<input class="colour" data-class="border_thin" type="radio" name="colour" />Thin
+				<input data-prefix="border_width_" data-class="border_width_thin" type="radio" name="width" />Thin
 			</label>
 			<label class="flex option border_medium">
-				<input class="colour" data-class="border_medium" type="radio" name="colour" />Medium
+				<input data-prefix="border_width_" data-class="border_width_medium" type="radio" name="width" />Medium
 			</label> 
 			<label class="flex option border_fat">
-				<input class="colour" data-class="border_fat" type="radio" name="colour" />Fat
+				<input data-prefix="border_width_" data-class="border_width_fat" type="radio" name="width" />Fat
 			</label> 
 		</div>	
 	</fieldset>

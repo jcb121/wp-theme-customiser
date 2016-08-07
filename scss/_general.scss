@@ -47,3 +47,29 @@ body {
 .padding_64{
 	padding:64px;
 }
+
+.border_style_none{
+	border-style: none;
+}
+.border_style_dashed{
+	border-style: dashed;
+}
+.border_style_dotted{
+	border-style: dotted;
+}
+.border_style_double{
+	border-style: double;
+}
+.border_style_solid{
+	border-style: solid;
+}
+
+.border_width_thin{
+	border-width: 1px;
+}
+.border_width_medium{
+	border-width: 4px;
+}
+.border_width_fat{
+	border-width: 8px;
+}

@@ -23,6 +23,7 @@ foreach ($theme_colours as $name => $default) {
 	
 	echo "<style id='bg_{$name}'> .bg_{$name}     { background-color:{$theme_color}; } </style> \n";
 	echo "<style id='colour_{$name}'> .colour_{$name} { color:{$theme_color}; } </style> \n";
+	echo "<style id='border_colour_{$name}'> .border_colour_{$name} { border-color:{$theme_color}; } </style> \n";
 }
 
 ?>

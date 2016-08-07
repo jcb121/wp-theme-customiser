@@ -9,8 +9,6 @@
   display: flex;
   justify-content: center;
   align-items: center; }
-  #site-home-content #main-image .image-footer > * {
-    margin: 16px 16px; }
 #site-home-content .content {
   padding: 16px; }
   #site-home-content .content .contact .contact-info {

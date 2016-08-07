@@ -48,43 +48,24 @@ jQuery(document).ready(function($) {
 	});
 	
 	
-	
-	/* OLD */
-	$('[data-customise]').on('change', 'input.background', function(){
-		var new_class = $(this).data('class');
-		var target = $(this).closest('[data-customise]');
+	$('[data-customise]').on('click', '.option input[type="radio"]', function(event){
 		
-		get_option('colours').then(function(colours){
-			for(var id in colours){
-				target.removeClass('bg_' + id);
-			}
-			target.addClass(new_class);
-		});
-	})
-	
-	$('[data-customise]').on('change', 'input.colour', function(){
+		var container = $(this).closest('[data-customise]');
+		var prefix = $(this).data('prefix');
 		var new_class = $(this).data('class');
-		var target = $(this).closest('[data-customise]');
 		
-		get_option('colours').then(function(colours){
-			for(var id in colours){
-				target.removeClass('colour_' + id);
-			}
-			target.addClass(new_class);
-		});
-	})
-	
-	$('[data-customise]').on('change', 'input.font', function(){
-		var new_class = $(this).data('class');
-		var target = $(this).closest('[data-customise]');
-		
-		get_option('fonts').then(function(fonts){
-			for(var id in fonts){
-				target.removeClass('font_' + id);
-			}
-			target.addClass(new_class);
-		});
-	})
+		container.removeClass(function(index, css){
+			css = css.split(' ');	
+			css.forEach(function(_class, _index){
+				_class = _class.trim();
+				if(!_class.includes(prefix)){
+					css[_index] = '';
+				}
+			})
+			return css.join(' ');
+		})
+		container.addClass(new_class);
+	});
 	
 	/** 
 	 * Closes picker on submit
