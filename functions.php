@@ -21,36 +21,17 @@
 				
 		wp_enqueue_style( 'dashicons' );
 		wp_enqueue_style('cardiffapp-style', get_stylesheet_uri() );
-		
-		// Add dynamic style
-		
 			
-		$custom_css = "";
-		
-		$custom_fonts = get_option("cardiffapp_custom_fonts");
-		foreach ($custom_fonts as $name => $default) {
-			$custom_font = get_theme_mod('font_import_' . $name, $default);
-			$custom_css .= "{$custom_font}; \n";
-		}
-				
-		$fonts = get_option("cardiffapp_font");
-		foreach ($fonts as $name => $default) {
-			$font = get_theme_mod('font_' . $name, $default);
-			$custom_css .= " .font_{$name} { font-family:{$font}; } \n";
-		}
-		
-		$theme_colours = get_option("cardiffapp_colour");
-		foreach ($theme_colours as $name => $default) {
-			$theme_color = get_theme_mod('colour_' . $name, $default);
-			$custom_css .= " .bg_{$name}     { background-color:{$theme_color}; } \n";
-			$custom_css .= " .colour_{$name} { color:{$theme_color}; } \n";
-		}
-		
-		wp_add_inline_style( 'cardiffapp-style', $custom_css );
-		
-		
 		wp_enqueue_script( 'parallaxjs-script', get_template_directory_uri() . '/js/parallaxjs/parallax.js', array("jquery"), '1.0.1', true );
 		wp_enqueue_script( 'cardiffapp-script', get_template_directory_uri() . '/main.js', array("jquery"), '1.0.1', true );
+	}
+	
+	add_action('wp_head', 'load_custom_css');
+	function load_custom_css(){
+		
+		require "custom_css.php";
+		
+		
 	}
 	
 	add_action( 'widgets_init', 'theme_slug_widgets_init' );
