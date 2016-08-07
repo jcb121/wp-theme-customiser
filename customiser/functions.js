@@ -5,8 +5,8 @@ var customiser = {
 };
 
 function set_not_static(element){
-	if($(element).css('position') === 'static'){
-		$(element).css('position', 'relative');
+	if(jQuery(element).css('position') === 'static'){
+		jQuery(element).css('position', 'relative');
 	}
 }
 
@@ -14,8 +14,8 @@ function set_not_static(element){
  * Investigate if needed
  */
 function set_zindex(element, search){
-	var zindex = $(element).parents(search).toArray().length + 1;
-	$(element).css('z-index', zindex);
+	var zindex = jQuery(element).parents(search).toArray().length + 1;
+	jQuery(element).css('z-index', zindex);
 }
 
 /**
@@ -23,15 +23,15 @@ function set_zindex(element, search){
  */
 function close_picker(picker){
 	
-	if(!$(picker).hasClass('options_picker')){
-		picker = $(picker).closest('.options_picker')
+	if(!jQuery(picker).hasClass('options_picker')){
+		picker = jQuery(picker).closest('.options_picker')
 	}
 	
 	//gets the container
-	var container = $(picker).closest('[data-customise]');
+	var container = jQuery(picker).closest('[data-customise]');
 	
 	//removes picker
-	$(picker).remove();
+	jQuery(picker).remove();
 	
 	//gets / sets z-index
 	//var zindex = container.parents('[data-customise]').toArray().length + 1;
@@ -46,14 +46,14 @@ function get_options(options){
 		promises.push(prom);
 	})
 	
-	return $.when.apply(this, promises);
+	return jQuery.when.apply(this, promises);
 }
 
 function get_option(option){
-	var deferred = $.Deferred();
+	var deferred = jQuery.Deferred();
 	
 	if(typeof customiser.options[option] === 'undefined'){
-		$.get(ajaxurl,{
+		jQuery.get(ajaxurl,{
 			'action': 'get_option',
 			'option':   option
 		}, 
@@ -75,14 +75,14 @@ function get_template_parts(parts){
 		promises.push(prom);
 	})
 	
-	return $.when.apply(this, promises);
+	return jQuery.when.apply(this, promises);
 }
 	
 function get_template_part(part){
-	var deferred = $.Deferred();
+	var deferred = jQuery.Deferred();
 	
 	if(typeof customiser.templates[part] === 'undefined'){
-		$.get(ajaxurl,{
+		jQuery.get(ajaxurl,{
 			'action': 'customiser_template',
 			'part': part
 		}, 
