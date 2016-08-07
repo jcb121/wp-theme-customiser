@@ -184,6 +184,9 @@ jQuery(document).ready(function($) {
 		}
 	}
 	
+	/*
+	 * Investigate if needed
+	 */
 	function set_zindex(element, search){
 		var zindex = $(element).parents(search).toArray().length + 1;
 		$(element).css('z-index', zindex);

@@ -73,7 +73,7 @@ function mytheme_customize_register( $wp_customize ){
 	foreach ($fonts as $name => $default) {
 		$wp_customize->add_setting('font_' . $name, array(
 			'default'     => $default,
-			'transport'   => 'refresh',
+			'transport'   => 'postMessage',
 		));
 		
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'font_' . $name, array(
@@ -105,7 +105,7 @@ function mytheme_customize_register( $wp_customize ){
 		
 		$wp_customize->add_setting('colour_' . $name, array(
 			'default'     => $default,
-			'transport'   => 'refresh',
+			'transport'   => 'postMessage',
 		));
 		
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'color_' . $name, array(
@@ -152,7 +152,9 @@ function cardiffapp_customizer_live_preview(){
 	wp_enqueue_script( 'handlebars', get_template_directory_uri().'/js/handlebars/handlebars.js', array('jquery'), "4.0.5", true );
 	//wp_enqueue_script( 'handlebars-runtime', get_template_directory_uri().'/js/handlebars/handlebars-runtime.js', array('jquery'), "4.0.5", true );
 	
-	wp_enqueue_script( 'cardiffapp-cusomizer', get_template_directory_uri().'/customiser/theme-customiser.js', array('jquery'), "0.1", true );
+	wp_enqueue_script( 'cardiffapp-cusomizer-settings', get_template_directory_uri().'/customiser/customiser-settings.js', array('jquery'), "0.1", true );
+	wp_enqueue_script( 'cardiffapp-cusomizer-theme', get_template_directory_uri().'/customiser/customiser-theme.js', array('jquery'), "0.1", true );
+	
 	wp_enqueue_style('cardiffapp-cusomizer-style', get_template_directory_uri().'/customiser/customiser.css');
 }
 
