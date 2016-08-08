@@ -1,0 +1,43 @@
+#site-header{
+	overflow:visible;
+	box-shadow: 0px 10px 20px 0px #bdbdbd;
+	border-bottom: 3px solid black;
+	
+	
+	&.sticky {
+		position: fixed;
+		top:0px;
+		left:0px;
+		right:0px;
+		z-index: 1;
+		.site-title {
+			display: none;
+		}
+		
+		#site-identity{
+			display: none;
+		}
+	}
+	
+	@import 'fragments/header/_site-identity';
+	@import 'fragments/header/_primary-menu';
+
+}
+
+#header_widgets{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-end;
+	
+	.widget_area{
+		@include md_card();
+		padding:16px;
+	}
+	
+	.widget_search{
+		label{
+			display: block;
+		}
+	}
+}

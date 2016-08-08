@@ -1,0 +1,28 @@
+#site-identity{
+	display: flex;
+	align-items: baseline;
+	flex-wrap: wrap;
+		
+	.site_title{
+		padding:8px;
+		margin:0px;
+		a{
+			font-weight: bold;
+		}
+	}
+	.site_description{
+		padding:8px;
+		margin:0px;
+		a{
+			font-weight: 100;
+		}
+	}
+	
+	a{
+		text-decoration: none;
+		&:hover{
+			
+		}
+	}
+	
+}

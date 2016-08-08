@@ -1,0 +1,75 @@
+@import 'scss/_variables';
+@import 'scss/_flex';
+
+@import 'fragments/header/_header';
+@import 'fragments/footer/_footer';
+@import 'fragments/content/_content';
+@import 'scss/_logo-image';
+
+body {
+	padding:0px;
+	margin:0px;
+}
+
+.site-width {
+	max-width: 1080px;
+	margin-left:auto;
+	margin-right:auto;
+	
+	@media (max-width: 1080px + 32px) {
+		margin-left:16px;
+		margin-right:16px;
+	}
+}
+
+.margin_8{
+	margin:8px;
+}
+.margin_16{
+	margin:16px;
+}
+.margin_32{
+	margin:32px;
+}
+.margin_64{
+	margin:64px;
+}
+
+.padding_8{
+	padding:8px;
+}
+.padding_16{
+	padding:16px;
+}
+.padding_32{
+	padding:32px;
+}
+.padding_64{
+	padding:64px;
+}
+
+.border_style_none{
+	border-style: none;
+}
+.border_style_dashed{
+	border-style: dashed;
+}
+.border_style_dotted{
+	border-style: dotted;
+}
+.border_style_double{
+	border-style: double;
+}
+.border_style_solid{
+	border-style: solid;
+}
+
+.border_width_thin{
+	border-width: 1px;
+}
+.border_width_medium{
+	border-width: 4px;
+}
+.border_width_fat{
+	border-width: 8px;
+}

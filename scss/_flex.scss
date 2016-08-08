@@ -1,0 +1,110 @@
+$breakpoints:(xs:600px, sm:960px, md:1280px, lg:1920px);
+
+.layout-row{
+	display: flex;
+	flex-direction: row;
+}
+.layout-row-reverse{
+	display: flex;
+	flex-direction: row-reverse;
+}
+.layout-column{
+	display: flex;
+	flex-direction: column;
+	@for $i from 1 to 20{
+		$val:$i * 5;
+		>.flex-#{$val}{
+		  flex-basis: 0%;
+		  flex-grow: 1;
+		  flex-shrink: 1;
+		  max-width:100%;
+		}
+	}
+	>.flex{
+		min-height: 0;
+	}
+	>.flex-33{
+		flex:1;
+		max-width:100%;
+	}
+	>.flex-66{
+		flex:1;
+		max-width:100%;
+	}
+
+}
+.flex{
+	//flex-basis:100%;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+//@for $i from 1 to 20{
+//	$val:$i * 5;
+//	.flex-#{$val}{
+//	  flex: 1 1 #{percentage($val/100)};
+//	  max-width:#{percentage($val/100)};
+//	}
+//}
+//.flex-33{
+//	flex: 1 1 33.33%;
+//	max-width:33.44%;
+//}
+//.flex-66{
+//	flex: 1 1 66.66%;
+//    max-width:66.66%;
+//}
+
+
+
+@each $key, $item in $breakpoints{
+
+  .layout-#{$key}-row{
+    @media only screen and (max-width: #{$item}) {
+      display: flex;
+      flex-direction:row;
+    }
+  }
+  .layout-gt-#{$key}-row{
+    @media only screen and (min-width: #{$item}) {
+      display: flex;
+      flex-direction:row;
+    }
+  }
+
+  .layout-#{$key}-column{
+    @media only screen and (max-width: #{$item}) {
+      display: flex;
+      flex-direction:column;
+    }
+  }
+  .layout-gt-#{$key}-column{
+    @media only screen and (min-width: #{$item}) {
+      display: flex;
+      flex-direction:column;
+    }
+  }
+}
+
+
+.layout-wrap{
+	flex-wrap: wrap;
+}
+.layout-space-around{
+	justify-content: space-around;
+}
+.layout-space-between{
+	justify-content: space-between;
+}
+
+
+
+
+.layout-padding{
+	&.edge{
+		margin:-16px;
+	}
+	padding:8px;
+	>*{
+		padding:8px;
+	}
+}
